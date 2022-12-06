@@ -4,6 +4,7 @@ import numpy as np
 model = load_model('keras_model.h5')
 cap = cv2.VideoCapture(0)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+list_options = ['Rock', 'Paper', 'Scissors', 'Nothing']
 
 while True: 
     ret, frame = cap.read()
@@ -15,6 +16,8 @@ while True:
     cv2.imshow('frame', frame)
     # Press q to close the window
     print(prediction)
+    max_index = np.argmax(prediction[0])
+    print(list_options[max_index])
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
             
