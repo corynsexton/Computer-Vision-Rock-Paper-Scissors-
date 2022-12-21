@@ -16,7 +16,7 @@ class RPS():                                                                    
         self.ties = 0                                                                       # Game begins with 0 ties                                                        
         self.model = load_model('keras_model.h5')                                           # Loads model created on Teaching-Machine
         self.cap = cv2.VideoCapture(0)                                                      # Assigns first camera available to 'cap'                     
-        self.data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)                    # Image passed into array with specified height, width and channels
+        self.data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)                    # Image passed into array with specified height, width & channels
         
 
     @staticmethod                                                                           # Static Method - Does not use instance of class
