@@ -16,7 +16,7 @@ class RPS():                                                                    
         self.ties = 0                                                                       # Game begins with 0 ties                                                        
         self.model = load_model('keras_model.h5')                                           # Loads model created on Teaching-Machine
         self.cap = cv2.VideoCapture(0)                                                      # Assigns first camera available to 'cap'                     
-        self.data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)                    # Image passed into array with specified height, width and number of channels
+        self.data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)                    # Image passed into array with specified height, width and channels
         
 
     @staticmethod                                                                           # Static Method - Does not use instance of class
@@ -32,7 +32,7 @@ class RPS():                                                                    
 
 
     def get_computer_choice(self):                                                          # Method to defind computer's choice
-        computer_choice = random.choice(self.list_options[:3])                              # Selects rock, paper or scissors at random from list using index slicing
+        computer_choice = random.choice(self.list_options[:3])                              # Randomly selects action from list of options using index slicing
         return computer_choice                                                              # Returns computer's choice
 
 
