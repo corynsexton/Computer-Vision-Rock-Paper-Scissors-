@@ -93,7 +93,7 @@ def play(nwins):                                                                
 
     else:
         game.user_wins == nwins                                                             # If user reaches nwins, user wins game
-        print(f" \nYou've won {nwins} rounds. \nCONGRATULATIONS - YOU WIN!")
+        print(f" \nYou won {nwins} rounds. \nCONGRATULATIONS - YOU WIN!")
 
     game.cap.release()                                                                      # Releases cap object
     cv2.destroyAllWindows()                                                                 # Destroys camera window
