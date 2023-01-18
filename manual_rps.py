@@ -31,7 +31,7 @@ def get_winner(computer_choice, user_choice):                                   
         print("You lost")
 
     else:
-        print("You win!")                                                               # Ensures user wins if computer does not
+        print("You won")                                                               # Ensures user wins if computer does not
 
 
 def play():                                                                             # Creates function to allow game to play
