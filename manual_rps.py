@@ -22,16 +22,16 @@ def get_winner(computer_choice, user_choice):                                   
         print("It is a tie!")
 
     elif computer_choice == 'Rock' and user_choice == 'Scissors':                       # Ensures Rock beats Scissors                  
-        print(f"You lose. {computer_choice} beats {user_choice}")
+        print("You lost")
 
     elif computer_choice == 'Paper' and user_choice == 'Rock':                          # Ensures Paper beats Rock
-        print(f"You lose. {computer_choice} beats {user_choice}")
+        print("You lost.")
 
     elif computer_choice == 'Scissors' and user_choice == 'Paper':                      # Ensures Scissors beats Paper
-        print(f"You lose. {computer_choice} beats {user_choice}")
+        print("You lost")
 
     else:
-        print(f"You win! {user_choice} beats {computer_choice}")                        # Ensures user wins if computer does not
+        print("You win!")                                                               # Ensures user wins if computer does not
 
 
 def play():                                                                             # Creates function to allow game to play
