@@ -19,7 +19,7 @@ def get_user_choice():                                                          
 def get_winner(computer_choice, user_choice):                                           # Creates a function to determine who wins                  
 
     if computer_choice == user_choice:                                                  # Ensures same choices will result in a tie
-        print(f"It's a tie!")
+        print("It is a tie!")
 
     elif computer_choice == 'Rock' and user_choice == 'Scissors':                       # Ensures Rock beats Scissors                  
         print(f"You lose. {computer_choice} beats {user_choice}")
