@@ -1,15 +1,15 @@
 import random                                                                           # Import random module                                               
              
 def get_computer_choice():                                                              # Creates a function to generate a computer choice for game
-    computer_choice = random.choice(["rock", "paper", "scissors"])                      # Using random module to select a random choice from list                                      
+    computer_choice = random.choice(["Rock", "Paper", "Scissors"])                      # Using random module to select a random choice from list                                      
     print(f"Comp choice: {computer_choice}")                                            # Prints computer's choice
     return computer_choice                                                              # Returns computer's choice from function                                                  
     
 
 def get_user_choice():                                                                  # Creates a function to generate user's choice  
     while True:
-        user_choice = input("Rock, Paper, Scissors? ").lower()                          # Asks user to enter a choice and uses lower method to make all lower case                                                                             
-        if user_choice in ["rock", "paper", "scissors"]:                                # Ensures user's choice is in list of options
+        user_choice = input("Rock, Paper, Scissors? ")                                  # Asks user to enter a choice                                                                          
+        if user_choice in ["Rock", "Paper", "Scissors"]:                                # Ensures user's choice is in list of options
             print(f"User guess: {user_choice}")                                         # Prints user's choice
             return user_choice                                                          # Returns user's chioice if valid guess
         else:
@@ -21,13 +21,13 @@ def get_winner(computer_choice, user_choice):                                   
     if computer_choice == user_choice:                                                  # Ensures same choices will result in a tie
         print(f"It's a tie!")
 
-    elif computer_choice == 'rock' and user_choice == 'scissors':                       # Ensures Rock beats Scissors                  
+    elif computer_choice == 'Rock' and user_choice == 'Scissors':                       # Ensures Rock beats Scissors                  
         print(f"You lose. {computer_choice} beats {user_choice}")
 
-    elif computer_choice == 'paper' and user_choice == 'rock':                          # Ensures Paper beats Rock
+    elif computer_choice == 'Paper' and user_choice == 'Rock':                          # Ensures Paper beats Rock
         print(f"You lose. {computer_choice} beats {user_choice}")
 
-    elif computer_choice == 'scissors' and user_choice == 'paper':                      # Ensures Scissors beats Paper
+    elif computer_choice == 'Scissors' and user_choice == 'Paper':                      # Ensures Scissors beats Paper
         print(f"You lose. {computer_choice} beats {user_choice}")
 
     else:
