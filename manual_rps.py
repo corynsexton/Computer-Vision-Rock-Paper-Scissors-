@@ -25,7 +25,7 @@ def get_winner(computer_choice, user_choice):                                   
         print("You lost")
 
     elif computer_choice == 'Paper' and user_choice == 'Rock':                          # Ensures Paper beats Rock
-        print("You lost.")
+        print("You lost")
 
     elif computer_choice == 'Scissors' and user_choice == 'Paper':                      # Ensures Scissors beats Paper
         print("You lost")
