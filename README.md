@@ -23,7 +23,6 @@ I held the 'paper' action to the camera and as you can see from the output below
 
 ![RPS-Templete Output](https://user-images.githubusercontent.com/117574774/212996998-4623f7f8-efa9-47c0-a79e-9136b32a73ca.png)
 
-
 ---
 
 ## Milestone 4
@@ -39,13 +38,13 @@ To generate a choice for the computer, I imported the random module so that I co
 <img width="588" alt="get_computer_choice()" src="https://user-images.githubusercontent.com/117574774/212997080-ed2cf72d-0f82-4540-98a6-2c68d64c52a2.png">
 
 As I have a function which returns the computer's choice, I now need one which will return the user's choice.
-The first thing I do is use Python's built-in `input()` function. This allows the user to manually type in their choice. I have also used the `lower()` function here to make all the letters entered into lower-case so that it can be located in `rps_choices`.
+I use Python's built-in `input()` function to allow the user to manually type in their choice. I have also used the `lower()` function here incase the user enters any upper-case letters, it will treat them as lower-case so that it can be located in `rps_choices`.
 
-<img width="462" alt="Invalid guess" src="https://user-images.githubusercontent.com/117574774/212997156-e6dd6fee-af6c-474e-829f-ac9cf416fefb.png">
 
-The user's guess can be whatever they want so I have used an `if` statement which will return a message telling the user their guess is invalid if it is not found in `rps_choices`. Once we have got a valid guess from the user, this function with return the user's choice and also print it out.
 
-<img width="658" alt="get_user_choice()" src="https://user-images.githubusercontent.com/117574774/212997207-06b1ec84-a9be-46f0-a63b-64e8e443e736.png">
+The user's guess can be whatever they want so I have used an `if` statement which will return a message telling the user their guess is invalid if it is not found in `rps_choices`. The `while True:` in line 13 creates a loop to ensure the `input()` function will continue until a valid guess is entered by the user. Once we have got a valid guess from the user, this function will return the user's choice and also print it out.
+
+
 
 I now need a function to compare the two guesses and determine a winner. I have called this my `get_winner` function where I am passing the `computer_choice` and `user_choice` in as arguments. I have then written code containing the classic rules of Rock, Paper, Scissors using `if`, `elif` and `else` statements where Rock beats Scissors, Scissors beats Paper, Paper beats Rock. I have also included a line here in the case of a tie.
 
