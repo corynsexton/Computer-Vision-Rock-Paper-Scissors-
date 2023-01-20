@@ -40,11 +40,12 @@ To generate a choice for the computer, I imported the random module so that I co
 As I have a function which returns the computer's choice, I now need one which will return the user's choice.
 I use Python's built-in `input()` function to allow the user to manually type in their choice. I have also used the `lower()` function here incase the user enters any upper-case letters, it will treat them as lower-case so that it can be located in `rps_choices`.
 
-
+<img width="676" alt="get_user_choice()" src="https://user-images.githubusercontent.com/117574774/213763073-0bf0dfbc-6c74-42fb-88df-d0c9dbfdf1c5.png">
 
 The user's guess can be whatever they want so I have used an `if` statement which will return a message telling the user their guess is invalid if it is not found in `rps_choices`. The `while True:` in line 13 creates a loop to ensure the `input()` function will continue until a valid guess is entered by the user. Once we have got a valid guess from the user, this function will return the user's choice and also print it out.
 
-
+<img width="525" alt="Invalid input, it's a tie and you win" src="https://user-images.githubusercontent.com/117574774/213763130-42732320-e8bd-4f2e-9463-eb3d4ca1d6e8.png">
+<img width="525" alt="you lose" src="https://user-images.githubusercontent.com/117574774/213763192-2838d1d0-0265-4354-872e-08e760fd829a.png">
 
 I now need a function to compare the two guesses and determine a winner. I have called this my `get_winner` function where I am passing the `computer_choice` and `user_choice` in as arguments. I have then written code containing the classic rules of Rock, Paper, Scissors using `if`, `elif` and `else` statements where Rock beats Scissors, Scissors beats Paper, Paper beats Rock. I have also included a line here in the case of a tie.
 
